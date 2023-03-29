@@ -29,6 +29,9 @@ a {
         }
 
         .menu-icon {
+            @media (min-width:768px){
+                display: none;
+            }
 
             .line {
                 background-color: $light-color;
@@ -61,18 +64,30 @@ a {
             flex: 0 0 100%;
             display: none;
             text-align: center;
+            @media (min-width:768px){
+                display: flex;
+                justify-content: space-between;
+                flex: 0 0 60%;
+            }
 
             &.active {
                 height: 100vh;
                 display: flex;
                 flex-wrap: wrap;
                 align-content: center;
+                @media (min-width:768px){
+                    height: initial;
+                }
             }
 
 
             .menu-item {
                 flex: 0 0 100%;
                 padding: 1rem 0;
+                @media (min-width:768px){
+                    flex: 0 0 auto;
+                    padding: 0;
+                }
             }
         }
 
